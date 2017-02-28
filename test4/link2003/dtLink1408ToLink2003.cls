@@ -10,7 +10,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 ]]></code>
 <assign value='source.{MSH:1}' property='target.{MSH:1}' action='set' />
 <assign value='source.{MSH:2}' property='target.{MSH:2}' action='set' />
-<assign value='"EPIC"' property='target.{MSH:3}' action='set' />
+<assign value='"EPICX"' property='target.{MSH:3}' action='set' />
 <assign value='"CSHS"' property='target.{MSH:4}' action='set' />
 <assign value='"IETEST"' property='target.{MSH:5}' action='set' />
 <assign value='"CSHS"' property='target.{MSH:6}' action='set' />
