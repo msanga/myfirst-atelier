@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25" zv="Cache for UNIX (IBM AIX for System Power System-64) 2015.2.3 (Build 855_0_16879U)" ts="2017-02-28 11:18:23">
+<Document name="EPIC_ORM_231.HL7">
+<Category name="EPIC_ORM_231" base="2.3.1">
+
+<MessageGroup name='ACK' description='General acknowledgment message'/>
+<MessageGroup name='ORM' description='PCX General order message'/>
+
+<MessageEvent name='O01' description='ORM - Order message'/>
+<MessageEvent name='Z01' description='Generic Heartbeat'/>
+
+<MessageType name='ORM_O01' structure='ORM_O01'/>
+<MessageType name='ZHB_Z01_Z01' structure='ZHB_Z01' returntype='base:ACK_A01'/>
+
+<MessageStructure name='ORM_O01' definition='base:MSH~[~base:PID~[~base:PV1~]~]~{~base:ORC~[~base:OBR~[~{~base:ODS~}~]~[~{~base:NTE~}~]~[~{~base:DG1~}~]~[~{~base:OBX~}~]~]~[~{~ZDF~}~]~}'/>
+<MessageStructure name='ZHB_Z01' definition='base:MSH~ZHB'/>
+
+<SegmentStructure name='ZDF' description='ZDF - Tube Feeding Segment'>
+    <SegmentSubStructure piece='1' description='Dose Amount' max_length='0' ifrepeating='0'/>
+    <SegmentSubStructure piece='2' description='Dose Unit' max_length='0' ifrepeating='0'/>
+    <SegmentSubStructure piece='3' description='Strength' max_length='0' ifrepeating='0'/>
+    <SegmentSubStructure piece='4' description='Calories per ounce' max_length='0' ifrepeating='0'/>
+    <SegmentSubStructure piece='5' description='Must Serve' max_length='0' ifrepeating='0'/>
+</SegmentStructure>
+<SegmentStructure name='ZHB' description='ZHB - PCX Custom Heartbeat Segment'>
+    <SegmentSubStructure piece='1' description='User Defined Fields 1' max_length='65536' ifrepeating='0'/>
+</SegmentStructure>
+
+</Category>
+</Document></Export>
